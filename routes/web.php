@@ -34,7 +34,7 @@ Route::get('/search', 'App\Http\Controllers\StudentController@search')->name('se
 //Attendance controller
 
 Route::get('/markatt/{id}', 'App\Http\Controllers\AttendanceController@edit')->name('dashboard.markatt');
-Route::post('/store', 'App\Http\Controllers\AttendanceController@store')->name('store');
+Route::post('/storeatt', 'App\Http\Controllers\AttendanceController@store')->name('storeatt');
 Route::get('/markatt', 'App\Http\Controllers\AttendanceController@create' )->name('markatt');
 Route::get('/atthistory/{id}', 'App\Http\Controllers\AttendanceController@show' )->name('atthistory');
 

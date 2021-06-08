@@ -5,6 +5,13 @@
      <div class="card">
      <div class="card-header">Register</div>
      <div class="card-body">
+        @if (Session::has('success'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{{ Session::get('success') }}</li>
+            </ul>
+        </div>
+    @endif
         <form name="my-form" action="{{ route('store')}}" method="post" enctype="multipart/form-data">
             @csrf
             

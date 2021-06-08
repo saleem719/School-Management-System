@@ -13,7 +13,7 @@
     </div>
 @endif
     <div class="card-body">
-        <form name="my-form" action="{{ url('store')}}" method="post">
+        <form name="my-form" action="{{ url('storeatt')}}" method="post">
             @csrf
             <div class="form-group row">
                 <label for="phone_number" class="col-md-4 col-form-label text-md-right">Roll No</label>
@@ -21,13 +21,6 @@
                     <input type="text" id="phone_number" class="form-control" name="rollno" value="{{$student['id']}}">
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="phone_number" class="col-md-4 col-form-label text-md-right">Date</label>
-                <div class="col-md-6">
-                    <input type="date" id="phone_number" class="form-control" name="date">
-                </div>
-            </div>
-
             <div class="form-group row">
                 <label for="phone_number" class="col-md-4 col-form-label text-md-right">Mark Attendance</label>
                 <div class="col-md-6">
@@ -40,7 +33,7 @@
             </div>
 
             <div class="col-md-6 offset-md-4 p-3">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                     Mark Attendance
                     </button>
             </div>

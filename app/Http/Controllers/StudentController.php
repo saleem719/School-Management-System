@@ -64,7 +64,7 @@ class StudentController extends Controller
    
             $student->profile()->save($profile);
             
-           return redirect('');
+            return redirect()->back()->with('success', 'Student Registered Successfully'); 
 
         }
 

@@ -46,7 +46,6 @@ class AttendanceController extends Controller
       {
         $attendance = new Attendance();     
         $attendance->student_id = $request->rollno;
-        $attendance->date = $request->date;
         $attendance->status = $request->status;
         $attendance->save();
         
@@ -62,16 +61,9 @@ class AttendanceController extends Controller
      */
     public function show($id)
      {
-    /  $student = Student::find($id);
-    return view('dashboard.atthistory',['student'=> $student]);
-        
-    }
+         $students = Attendance::where( 'student_id', 'LIKE', '%' . $id . '%' )->get();
 
-    
-    public function search(Request $request)
-    {
-
-        
+          return view('dashboard.atthistory', compact('students'));
     }
 
     /**

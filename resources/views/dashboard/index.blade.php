@@ -59,11 +59,13 @@
         <th>{{$student->profile->phone}}</th>
         <td>{{$student->age}}</td>
         <td>{{$student->Subject}}</td>
+
         <td>
           <a href="{{ url('/show/'.$student->id)}}" class="btn btn-sm btn-info">Show</a>
           <a href= "{{ url('/edit/'.$student->id)}}" class="btn btn-sm btn-success">Edit</a>
           <a href="http://" class="btn btn-sm btn-danger">Delete</a>
         </td>
+        
       </tbody>
       @endforeach
    </table>
